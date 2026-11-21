@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demande d’admission Canada express</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--g:#1f5b3a;--gd:#123d27;--gl:#dce9e0;--bg:#fff;--paper:#f4f7f4;--ink:#1b2a21;--mute:#52635a;--line:#cfdad2;--err:#a32222;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a14;--paper:#16231b;--ink:#e8f0ea;--mute:#a5b8ac;--line:#2c4034;--gl:#1e3427;--g:#5fb184;--err:#ff8a8a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101a14;--paper:#16231b;--ink:#e8f0ea;--mute:#a5b8ac;--line:#2c4034;--gl:#1e3427;--g:#5fb184;--err:#ff8a8a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;line-height:1.2;margin:0}
+a{color:var(--g)}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+header.top{background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header.top .wrap{display:flex;align-items:center;gap:.9rem;padding-top:.7rem;padding-bottom:.7rem}
+.logo{height:3.2rem;width:auto;flex:none;background:#fff}
+.brand{font:700 1.05rem/1.2 "Source Serif 4",Georgia,serif}
+nav{margin-left:auto;display:flex;gap:1.1rem;font-weight:600}
+av a{text-decoration:none;color:var(--ink)}nav a:hover{color:var(--g)}
+@media(max-width:44rem){nav{display:none}}
+.hero{background:var(--gd);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding-top:4rem;padding-bottom:4rem}
+.hero h1{font-size:clamp(2rem,4.6vw,3.4rem);font-weight:700}
+.hero p{max-width:34rem;color:#d6e6dc;margin:1.1rem 0 1.8rem}
+.btn{display:inline-block;background:#fff;color:var(--gd);font-weight:600;padding:.8rem 1.4rem;border:0;border-radius:2px;text-decoration:none;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn.solid{background:var(--g);color:#fff}
+.cover{aspect-ratio:4/3;border:1px solid #3d8a60;display:grid;place-items:center;text-align:center;color:#cfe5d7;padding:1rem;font-size:.95rem;background-size:cover;background-position:center}
+@media(max-width:52rem){.hero .wrap{grid-template-columns:1fr;padding-top:2.5rem;padding-bottom:2.5rem}}
+section{padding:3.5rem 0}
+section.alt{background:var(--paper)}
+h2{font-size:clamp(1.55rem,3vw,2.1rem);margin-bottom:1.4rem}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.2rem}
+.rule{border-top:3px solid var(--g);padding-top:.8rem}
+.rule h3{font-size:1.15rem;margin-bottom:.4rem}
+.rule p{margin:0;color:var(--mute)}
+.fac{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1.6rem 2rem}
+.fac h3{font-size:1.1rem;color:var(--g);border-bottom:1px solid var(--line);padding-bottom:.35rem;margin-bottom:.5rem}
+.fac ul{margin:0;padding-left:1.1rem;color:var(--ink)}
+.note{color:var(--mute);font-size:.95rem;margin-top:1.4rem}
+form{background:var(--bg);border:1px solid var(--line);padding:1.5rem}
+fieldset{border:0;border-top:2px solid var(--g);margin:0 0 1.8rem;padding:1rem 0 0}
+legend{font:700 1.25rem "Source Serif 4",Georgia,serif;padding-right:.6rem;color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.2rem}
+label{display:block;font-weight:600;font-size:.95rem}
+input,select,textarea{display:block;width:100%;margin-top:.3rem;padding:.65rem .7rem;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:2px}
+input:focus,select:focus,textarea:focus,.btn:focus-visible,a:focus-visible{outline:3px solid var(--g);outline-offset:2px}
+.choice{border:1px solid var(--line);padding:1rem;margin-bottom:1rem;background:var(--paper)}
+.choice h3{font-size:1.05rem;margin-bottom:.7rem}
+.fee{background:var(--gl);padding:1rem 1.2rem;font-weight:600;margin:1rem 0}
+.check{display:flex;gap:.6rem;font-weight:400;align-items:flex-start}
+.check input{width:auto;margin-top:.3rem}
+.err{color:var(--err);font-weight:600;margin:.8rem 0 0;min-height:1.4em}
+.ok{display:none;background:var(--gl);border-left:4px solid var(--g);padding:1.2rem;margin-top:1rem}
+footer{background:var(--gd);color:#d6e6dc;padding:2.2rem 0}
+footer a{color:#fff}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">Demande d’admission Canada express</div>
+  <nav><a href="#conditions">Conditions</a><a href="#filieres">Filières</a><a href="#formulaire">Postuler</a><a href="#contact">Contact</a></nav>
+</div></header>
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <h1>Déposez votre demande d’admission pour le Canada</h1>
+    <p>Une plateforme en ligne pour les étudiants internationaux : renseignez votre profil et votre cursus, choisissez jusqu’à trois programmes et envoyez votre dossier.</p>
+    <a class="btn" href="#formulaire">Commencer ma demande</a>
+  </div>
+  <div class="cover" role="img" aria-label="Façade d’un pavillon universitaire"></div>
+</div></section>
+<section id="conditions"><div class="wrap">
+  <h2>Avant de postuler</h2>
+  <div class="rules">
+    <div class="rule"><h3>Candidature directe</h3><p>Vous postulez directement via cette plateforme en ligne, Demande d’admission Canada express.</p></div>
+    <div class="rule"><h3>Trois programmes au maximum</h3><p>Vous pouvez déposer une demande dans trois programmes au plus.</p></div>
+    <div class="rule"><h3>100 € par candidature</h3><p>L’université demande des frais administratifs de 100 € pour chaque candidature.</p></div>
+    <div class="rule"><h3>Pour un baccalauréat</h3><p>Un diplôme de fin d’études secondaires donnant accès à l’enseignement supérieur dans le pays où il a été délivré, ainsi qu’une preuve de votre niveau dans toutes les langues d’enseignement du programme.</p></div>
+    <div class="rule"><h3>Pour une maîtrise</h3><p>Un baccalauréat dans un domaine proche du programme visé.</p></div>
+  </div>
+</div></section>
+<section id="filieres" class="alt"><div class="wrap">
+  <h2>Les filières disponibles</h2>
+  <div class="fac" id="fac"></div>
+  <p class="note">Les programmes sont regroupés par faculté.</p>
+</div></section>
+<section id="formulaire"><div class="wrap">
+  <h2>Formulaire de demande d’admission</h2>
+  <form id="f" novalidate>
+    <fieldset><legend>1. Informations personnelles</legend><div class="grid">
+      <label>Civilité<select name="Civilité" required><option value="">Choisir</option><option>Madame</option><option>Monsieur</option></select></label>
+      <label>Nom de famille<input name="Nom" required autocomplete="family-name"></label>
+      <label>Prénom(s)<input name="Prénom" required autocomplete="given-name"></label>
+      <label>Date de naissance<input type="date" name="Date de naissance" required></label>
+      <label>Ville et pays de naissance<input name="Lieu de naissance" required></label>
+      <label>Nationalité<input name="Nationalité" required></label>
+      <label>Pays de résidence<input name="Pays de résidence" required autocomplete="country-name"></label>
+      <label>Adresse complète<input name="Adresse" required autocomplete="street-address"></label>
+      <label>Courriel<input type="email" name="Courriel" required autocomplete="email"></label>
+      <label>Téléphone (avec indicatif)<input type="tel" name="Téléphone" required autocomplete="tel"></label>
+      <label>Numéro de passeport<input name="Passeport" required></label>
+    </div></fieldset>
+    <fieldset><legend>2. Cursus scolaire</legend><div class="grid">
+      <label>Dernier diplôme obtenu<select name="Dernier diplôme" required><option value="">Choisir</option><option>Diplôme de fin d’études secondaires</option><option>Diplôme universitaire de premier cycle</option><option>Autre diplôme postsecondaire</option></select></label>
+      <label>Intitulé exact du diplôme<input name="Intitulé du diplôme" required></label>
+      <label>Série, spécialité ou domaine<input name="Spécialité" required></label>
+      <label>Établissement<input name="Établissement" required></label>
+      <label>Pays de l’établissement<input name="Pays de l’établissement" required></label>
+      <label>Année d’obtention<input type="number" name="Année d’obtention" min="1980" max="2030" required></label>
+      <label>Moyenne générale ou mention<input name="Moyenne" required></label>
+      <label>Autres études ou formations (facultatif)<textarea name="Autres études" rows="3"></textarea></label>
+    </div></fieldset>
+    <fieldset><legend>3. Langues</legend><div class="grid">
+      <label>Langue maternelle<input name="Langue maternelle" required></label>
+      <label>Langue d’enseignement du programme<select name="Langue d’enseignement" required><option value="">Choisir</option><option>Français</option><option>Anglais</option><option>Français et anglais</option></select></label>
+      <label>Preuve de niveau (test ou diplôme)<input name="Preuve de langue" placeholder="Ex. DELF B2, TCF, TEF, IELTS" required></label>
+      <label>Résultat ou niveau obtenu<input name="Résultat langue" required></label>
+    </div></fieldset>
+    <fieldset><legend>4. Programmes demandés (trois au maximum)</legend>
+      <div id="choices"></div>
+      <div class="fee" aria-live="polite">Frais administratifs : <span id="total">100</span> € (100 € par candidature)</div>
+    </fieldset>
+    <fieldset><legend>5. Motivation</legend>
+      <label>Pourquoi souhaitez-vous étudier au Canada ?<textarea name="Motivation" rows="5" required></textarea></label>
+    </fieldset>
+    <label class="check"><input type="checkbox" id="ok" required> Je certifie que les informations fournies sont exactes.</label>
+    <p class="err" id="err" role="alert"></p>
+    <button class="btn solid" type="submit">Envoyer ma demande</button>
+    <div class="ok" id="done"><strong>Votre message est prêt.</strong> Votre application de messagerie s’est ouverte avec votre dossier complet adressé à <a href="mailto:servicesdadmission@gmail.com">servicesdadmission@gmail.com</a>. Vérifiez-le, joignez vos documents puis envoyez-le.</div>
+  </form>
+</div></section>
+<footer id="contact"><div class="wrap">
+  <h2 style="color:#fff;font-size:1.4rem">Contact</h2>
+  <p>Une question sur votre dossier ? Écrivez-nous à <a href="mailto:servicesdadmission@gmail.com">servicesdadmission@gmail.com</a>.</p>
+  <p style="font-size:.9rem;margin:0">Demande d’admission Canada express</p>
+</div></footer>
+<script>
+var FAC={
+"Administration":["Administration des affaires","Comptabilité","Finance","Marketing","Management"],
+"Droit":["Droit"],
+"Éducation":["Enseignement préscolaire et primaire","Enseignement secondaire","Orientation","Psychoéducation"],
+"Génie":["Génie civil","Génie chimique","Génie électrique","Génie informatique","Génie mécanique","Génie robotique","Génie biotechnologique"],
+"Lettres et sciences humaines":["Communication","Géographie","Histoire","Psychologie","Traduction","Travail social"],
+"Médecine et sciences de la santé":["Médecine","Pharmacie","Sciences infirmières","Sciences biomédicales"],
+"Sciences":["Biologie","Chimie","Écologie","Informatique","Mathématiques","Physique"],
+"Sciences de l’activité physique":["Kinésiologie","Enseignement de l’éducation physique"],
+"Politique appliquée":["Politique appliquée"],
+"Théologie, éthique et philosophie":["Éthique","Philosophie"]};
+var fac=document.getElementById('fac'),ch=document.getElementById('choices');
+Object.keys(FAC).forEach(function(k){var d=document.createElement('div');d.innerHTML='<h3></h3><ul></ul>';d.firstChild.textContent=k;FAC[k].forEach(function(p){var li=document.createElement('li');li.textContent=p;d.lastChild.appendChild(li)});fac.appendChild(d)});
+var opts='<option value="">Choisir</option>'+Object.keys(FAC).map(function(k){return '<optgroup label="'+k+'">'+FAC[k].map(function(p){return '<option>'+p+'</option>'}).join('')+'</optgroup>'}).join('');
+for(var i=1;i<=3;i++){var c=document.createElement('div');c.className='choice';c.innerHTML='<h3>Choix '+i+(i>1?' (facultatif)':'')+'</h3><div class="grid"><label>Niveau<select class="lv"><option value="">Choisir</option><option>Baccalauréat</option><option>Maîtrise</option></select></label><label>Programme<select class="pg">'+opts+'</select></label><label>Session visée<select class="se"><option value="">Choisir</option><option>Automne 2027</option><option>Hiver 2027</option><option>Été 2027</option></select></label></div>';ch.appendChild(c)}
+var tot=document.getElementById('total');
+function upd(){var n=0;document.querySelectorAll('.choice').forEach(function(c){if(c.querySelector('.pg').value)n++});tot.textContent=Math.max(n,1)*100}
+ch.addEventListener('change',upd);
+document.getElementById('f').addEventElementListener('submit',function(e){
+e.preventDefault();var f=e.target,er=document.getElementById('err');er.textContent='';
+var bad=null;f.querySelectorAll('[required]').forEach(function(x){if(!bad&&((x.type==='checkbox'&&!x.checked)||(x.type!=='checkbox'&&!x.value.trim())))bad=x});
+if(bad){er.textContent='Complétez le champ obligatoire : '+(bad.type==='checkbox'?'certification finale':(bad.closest('label').firstChild.textContent||'').trim())+'.';bad.focus();return}
+var sel=[];document.querySelectorAll('.choice').forEach(function(c,i){var p=c.querySelector('.pg').value,l=c.querySelector('.lv').value,s=c.querySelector('.se').value;if(p||l||s){if(!(p&&l&&s)){sel=null;er.textContent='Le choix '+(i+1)+' est incomplet : indiquez le niveau, le programme et la session.';return}if(sel)sel.push('Choix '+(i+1)+' : '+l+' en '+p+' ('+s+')')}});
+if(sel===null)return;
+if(!sel.length){er.textContent='Choisissez au moins un programme (trois au maximum).';return}
+var L=['DEMANDE D’ADMISSION CANADA EXPRESS',''];
+f.querySelectorAll('input[name],select[name],textarea[name]').forEach(function(x){if(x.value.trim())L.push(x.name+' : '+x.value.trim())});
+L.push('','PROGRAMMES DEMANDÉS',sel.join('\n'),'','Frais administratifs : '+sel.length*100+' €');
+var u='mailto:servicesdadmission@gmail.com?subject='+encodeURIComponent('Demande d’admission – '+f.elements['Prénom'].value+' '+f.elements['Nom'].value)+'&body='+encodeURIComponent(L.join('\n'));
+document.getElementById('done').style.display='block';location.href=u;});
+</script>
+</body>
+</html>
